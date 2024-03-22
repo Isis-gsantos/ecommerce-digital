@@ -16,7 +16,7 @@ export const Header = styled.header`
     h1 {
         background-color: #ffffff;
         color: #252424;
-        padding: 5px;
+        padding: 10px;
     }
 
     nav ul {

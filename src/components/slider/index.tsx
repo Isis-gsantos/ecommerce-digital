@@ -1,6 +1,5 @@
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import styled from "styled-components";
 import "swiper/css"; //css padrão do swiper
 import "swiper/css/pagination"; //aquelas bolinhas 
 import "swiper/css/scrollbar";
@@ -9,6 +8,7 @@ import { EffectFade } from "swiper/modules";
 import celularBanner from '../../images/celular-1.png'
 import headphoneBanner from '../../images/headphone-4.png'
 import watchBanner from '../../images/watch-3.png'
+import { Container, Content } from "./style";
 
 register();
 
@@ -67,26 +67,3 @@ export const Slider = () => {
     );
 };
 
-const Container = styled.section`
-    min-height: 30vh;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #f7ede2;
-
-    .banner {
-        border-radius: 20px;
-    }
-`;
-
-const Content = styled.article`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-height: 300px;
-
-    img {
-        max-height: 300px;
-        object-fit: cover;
-    }
-`
