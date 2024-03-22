@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.section`
     background: rgb(101,94,97);
@@ -59,25 +59,7 @@ export const Header = styled.header`
         display: flex;
         justify-content: center;
         align-items: center;
-        /* position: relative; */
         gap: 8px;
-
-        /* &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 2px;
-            background-color: #fff;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-out;
-        }
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        } */
     }
 `;
 
@@ -131,11 +113,19 @@ export const DropdownList = styled.div`
     }    
 `;
 
+const animatedHeadphone = keyframes`
+    from  {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px);
+    }
+`;
+
 export const ContentBanner = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 30px; */
     height: 80vh;
     gap: 60px;
 
@@ -145,5 +135,6 @@ export const ContentBanner = styled.section`
     
     img {
         max-width: 350px;
+        animation: ${animatedHeadphone} 1.5s infinite alternate ease-in-out;
     }
-`
+`;
