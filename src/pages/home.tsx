@@ -1,3 +1,4 @@
+import { QualityList } from "../components/quality-list";
 import { Head } from "../components/head/index";
 import { Main } from "../components/main-content";
 import { Slider } from "../components/slider";
@@ -9,10 +10,11 @@ export const Home = () => {
             <Head />
             <Slider />
             <Main />
+            <QualityList />
         </Container>
     )
-}
+};
 
 const Container = styled.div`
     background-color: #f7ede2;
-`
+`;

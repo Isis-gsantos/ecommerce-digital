@@ -4,7 +4,7 @@ export const Container = styled.section`
     min-height: 30vh;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 40px;
 
     .banner {
         border-radius: 20px;

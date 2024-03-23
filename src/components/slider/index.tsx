@@ -1,7 +1,7 @@
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; //css padrão do swiper
-import "swiper/css/pagination"; //aquelas bolinhas 
+import "swiper/css"; 
+import "swiper/css/pagination"; 
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import { EffectFade } from "swiper/modules";
@@ -50,13 +50,12 @@ export const Slider = () => {
             <Swiper
                 modules={[EffectFade]}
                 effect="fade"
-                slidesPerView={1} //quantos slides eu quero mostrar na tela
+                slidesPerView={1} 
                 pagination={{ clickable: true }}
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id} style={{ backgroundColor: item.backgroundColor }} className="banner">
                         <Content>
-                            {/* Dentro do SwiperSlide, você pode renderizar as imagens */}
                             <h3>{item.description}</h3>
                             <img src={item.image} alt={item.name} />
                         </Content>
@@ -66,4 +65,3 @@ export const Slider = () => {
         </Container>
     );
 };
-
