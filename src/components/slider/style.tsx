@@ -16,6 +16,7 @@ export const Content = styled.article`
     justify-content: space-around;
     align-items: center;
     max-height: 300px;
+    gap: 20px;
 
     h3 {
         color: #fff;
@@ -25,5 +26,18 @@ export const Content = styled.article`
     img {
         max-height: 300px;
         object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+        position: relative;
+        
+        img {
+            
+        }
+
+        h3 {
+            text-align: center;
+            position: absolute;
+        }
     }
 `;

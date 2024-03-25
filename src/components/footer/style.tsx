@@ -5,7 +5,7 @@ export const Container = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 40px;
     background-color: #252424;
     color: #ffffff;
 `;
@@ -15,6 +15,12 @@ export const Subscribe = styled.section`
     justify-content: space-between;
     align-items: center;
     gap: 200px;
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
 
     h2 {
         background-color: #ffffff;
@@ -69,7 +75,17 @@ export const Services = styled.nav`
     margin-top: 50px;
     gap: 50px;
 
+    @media (max-width: 910px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         div{
             display: flex;
             gap: 20px;

@@ -13,6 +13,13 @@ export const Header = styled.header`
     align-items: center;
     padding: 15px;
 
+    @media (max-width: 910px) {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
     h1 {
         background-color: #ffffff;
         color: #252424;
@@ -21,6 +28,8 @@ export const Header = styled.header`
 
     nav ul {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
         cursor: pointer;
     }
@@ -95,11 +104,11 @@ export const DropdownList = styled.div`
         top: 40px;
         right: 0;
         left: -25px;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: #252424;
         border-radius: 10px;
         padding: 15px;
         width: 100px;
-        z-index: 1;
+        z-index: 3;
 
         li {
         transition: .3s ease-in;
@@ -128,6 +137,17 @@ export const ContentBanner = styled.section`
     align-items: center;
     height: 80vh;
     gap: 60px;
+    padding: 30px;
+
+    @media (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
 
     div {
         max-width: 500px;
