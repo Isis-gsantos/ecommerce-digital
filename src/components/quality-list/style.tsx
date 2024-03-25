@@ -9,6 +9,9 @@ export const Container = styled.section`
 
 export const Content = styled.ul`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 60px;
     background-color: #dee2e6;
     border-radius: 5px;
