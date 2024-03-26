@@ -1,12 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 import { Home } from "./pages/home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ProductPage } from './pages/product-page';
 
 function App() {
 
   return (
     <>
       <GlobalStyle />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/product-page/:category/:id' element={<ProductPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
@@ -19,5 +26,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
   }
 `;

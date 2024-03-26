@@ -1,42 +1,12 @@
-import { Container, Header, ContentBanner, DropdownList, AnimatedList } from './style'
-import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
+import { Container, ContentBanner} from './style'
 import headphoneDestaque from '../../images/headphone-1.png'
-import { useState } from 'react';
+import { Navbar } from './navbar';
 
 export const Head = () => {
-    const [open, setOpen] = useState<boolean>(false)
-
-    const handleDropdown = (state: boolean) => {
-        setOpen(!state)
-    }
-    console.log(open);
-
     return (
         <>
             <Container>
-                <Header>
-                    <h1>DigitalHub Store</h1>
-
-                    <nav>
-                        <ul>
-                            <DropdownList>
-                                <AnimatedList onClick={() => handleDropdown(open)}>Catálogo</AnimatedList>
-                                {open && (
-                                    <ul>
-                                        <li>Celulares</li>
-                                        <li>Headphones</li>
-                                        <li>Smartwatch</li>
-                                    </ul>
-                                )}
-                            </DropdownList>
-                            <div>
-                                <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
-                            </div>
-                            <AnimatedList><BsHeart /> Curtidos</AnimatedList>
-                            <AnimatedList><BsCart3 /> Carrinho</AnimatedList>
-                        </ul>
-                    </nav>
-                </Header>
+                <Navbar />
 
                 <ContentBanner>
                     <div>

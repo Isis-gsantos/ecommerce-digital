@@ -5,6 +5,11 @@ export const Container = styled.section`
     background: linear-gradient(270deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
     min-height: 100vh;
     color: #fff;
+
+    @media (max-width: 500px) {
+        background: rgb(101,94,97);
+        background: linear-gradient(0deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
+    }
 `;
 
 export const Header = styled.header`
@@ -12,12 +17,19 @@ export const Header = styled.header`
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+    
+    color: #ffffff;
 
     @media (max-width: 910px) {
         display: flex;
         flex-direction: column;
         padding: 30px;
         gap: 20px;
+    }
+
+    .backgroundProsucts {
+        background: rgb(101,94,97);
+        background: linear-gradient(270deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
     }
 
     h1 {
@@ -100,6 +112,7 @@ export const DropdownList = styled.div`
     ul {
         display: flex;
         flex-direction: column;
+        
         position: absolute;
         top: 40px;
         right: 0;
@@ -113,6 +126,7 @@ export const DropdownList = styled.div`
         li {
         transition: .3s ease-in;
         padding: 5px;
+        max-width: 90px;
 
         &:hover {
             background-color: #eee;

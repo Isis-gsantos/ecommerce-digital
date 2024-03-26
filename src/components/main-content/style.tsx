@@ -29,6 +29,10 @@ export const Products = styled.div`
     box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.1);
     width: 220px;
     position: relative;
+    
+    a {
+        color: #252424;
+    }
 
     span {
         position: absolute;
