@@ -10,7 +10,7 @@ export const Main = () => {
         <>
             <Container>
                 <h2>Mais Vendidos</h2>
-                <Content>
+                <Content id="catalogo">
                     {dataProducts.map((products, index) => (
                         products.map((product) => (
                             <Products key={product.id}>

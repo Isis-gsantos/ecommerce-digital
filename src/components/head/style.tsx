@@ -20,13 +20,6 @@ export const Header = styled.header`
     
     color: #ffffff;
 
-    @media (max-width: 910px) {
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        gap: 20px;
-    }
-
     .backgroundProsucts {
         background: rgb(101,94,97);
         background: linear-gradient(270deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
@@ -38,10 +31,22 @@ export const Header = styled.header`
         padding: 10px;
     }
 
-    nav ul {
+    a {
+        color: #ffffff;
+    }
+`;
+
+export const NavbarDesktop = styled.nav`
+    display: block;
+
+    @media (max-width: 910px) {
+        display: none;
+    }
+
+    ul {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
         gap: 30px;
         cursor: pointer;
     }
@@ -81,6 +86,69 @@ export const Header = styled.header`
         justify-content: center;
         align-items: center;
         gap: 8px;
+        font-size: 16px;
+    }
+
+    
+`;
+
+export const MobileMenu = styled.div`
+    display: none;
+    
+    @media (max-width: 910px) {
+        display: block;
+        position: relative;
+    }
+
+    ul {
+        position: absolute;
+        z-index: 1;
+        height: 350px;
+        background-color: #252424;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        gap: 20px;        
+
+        div {
+        position: relative;
+        
+        input {
+            border: 1px solid #fff;
+            background: transparent;
+            border-radius: 5px;
+            padding: 5px 15px;
+            color: #ffffff;
+            
+            position: relative;
+            &::placeholder {
+                color: #ffffff;
+                padding: 0 10px;
+            }
+        }
+
+        span {
+            position: absolute;
+            color: black;
+            right: 1px;
+            color: #fff;
+            padding: 0 5px;
+            height: 100%;
+            border-radius: 5px;
+            top: 5px;
+        }
+    }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 40px;
+        position: relative;
     }
 `;
 
@@ -102,38 +170,6 @@ export const AnimatedList = styled.li`
             transform: scaleX(1);
             transform-origin: bottom left;
         }
-`
-
-export const DropdownList = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        
-        position: absolute;
-        top: 40px;
-        right: 0;
-        left: -25px;
-        background-color: #252424;
-        border-radius: 10px;
-        padding: 15px;
-        width: 100px;
-        z-index: 3;
-
-        li {
-        transition: .3s ease-in;
-        padding: 5px;
-        max-width: 90px;
-
-        &:hover {
-            background-color: #eee;
-            color: black;
-        }
-        }
-    }    
 `;
 
 const animatedHeadphone = keyframes`
@@ -157,6 +193,7 @@ export const ContentBanner = styled.section`
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin-top: 20px;
 
         img {
             width: 100%;

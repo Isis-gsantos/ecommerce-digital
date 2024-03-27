@@ -27,5 +27,6 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
   }
 `;

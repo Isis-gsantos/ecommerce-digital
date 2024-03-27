@@ -1,40 +1,56 @@
-import { Header, DropdownList, AnimatedList } from './style';
+import { Header, AnimatedList, NavbarDesktop, MobileMenu } from './style';
 import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
 import { useState } from 'react';
+import { CgMenuRightAlt } from "react-icons/cg";
 
 export const Navbar = () => {
-    const [open, setOpen] = useState<boolean>(false)
+    const [showMenu, setShowMenu] = useState(false);
 
-    const handleDropdown = (state: boolean) => {
-        setOpen(!state)
-    }
-    console.log(open);
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
 
-    return(
+    return (
         <>
             <Header>
-                    <h1>DigitalHub Store</h1>
+                <h1>DigitalHub Store</h1>
 
-                    <nav>
+                <NavbarDesktop>
+                    <ul>
+                        <AnimatedList><a href="#catalogo">Catálogo</a></AnimatedList>
+                        <div>
+                            <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
+                        </div>
+                        <AnimatedList><BsHeart /> Curtidos</AnimatedList>
+                        <AnimatedList><BsCart3 /> Carrinho</AnimatedList>
+                    </ul>
+                </NavbarDesktop>
+
+                <MobileMenu>
+                    <button onClick={toggleMenu}><CgMenuRightAlt /></button>
+                    {showMenu && (
                         <ul>
-                            <DropdownList>
-                                <AnimatedList onClick={() => handleDropdown(open)}>Catálogo</AnimatedList>
-                                {open && (
-                                    <ul>
-                                        <li>Celulares</li>
-                                        <li>Headphones</li>
-                                        <li>Smartwatch</li>
-                                    </ul>
-                                )}
-                            </DropdownList>
-                            <div>
-                                <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
-                            </div>
-                            <AnimatedList><BsHeart /> Curtidos</AnimatedList>
-                            <AnimatedList><BsCart3 /> Carrinho</AnimatedList>
-                        </ul>
-                    </nav>
-                </Header>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <div>
+                            <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
+                        </div>
+                        <li><BsHeart /> Curtidos</li>
+                        <li><BsCart3 /> Carrinho</li>
+                    </ul>
+                    )}
+                </MobileMenu>
+            </Header>
         </>
-    )
+    );
 };
+
+{/* <DropdownList>
+    <AnimatedList onClick={() => handleDropdown(open)}>Catálogo</AnimatedList>
+    {open && (
+        <ul>
+            <li>Celulares</li>
+            <li>Headphones</li>
+            <li>Smartwatch</li>
+        </ul>
+    )}
+</DropdownList> */}
