@@ -2,11 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import { Home } from "./pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductPage } from './pages/product-page';
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 function App() {
 
   return (
-    <>
+    <ShoppingCartProvider>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -14,7 +15,7 @@ function App() {
           <Route path='/product-page/:category/:id' element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </ShoppingCartProvider>
   )
 }
 

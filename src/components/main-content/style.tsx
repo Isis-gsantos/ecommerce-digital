@@ -46,7 +46,6 @@ export const Products = styled.div`
     }
 
     div {
-        margin-bottom: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,7 +55,6 @@ export const Products = styled.div`
             height: 200px;
             object-fit: cover;
             transition: .4s ease-in-out;
-            
 
             &:hover {
                 transform: scale(1.1);
@@ -66,6 +64,7 @@ export const Products = styled.div`
 
     h4 {
         max-width: 200px;
+        margin-top: 10px;
     }
 
     p {
@@ -84,4 +83,25 @@ export const Products = styled.div`
         width: 100%;
         cursor: pointer;
     }
+`;
+
+export const StyledButtonCart = styled.section`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    button {
+        font-size: 16px;
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .removeFromCart {
+            color: red;
+            background-color: transparent;
+            font-size: 18px;
+        }
 `;

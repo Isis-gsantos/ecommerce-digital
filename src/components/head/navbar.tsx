@@ -19,7 +19,7 @@ export const Navbar = () => {
                     <ul>
                         <AnimatedList><a href="#catalogo">Catálogo</a></AnimatedList>
                         <div>
-                            <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
+                            <input type="search" placeholder="Buscar" /> <span><BsSearch /></span>
                         </div>
                         <AnimatedList><BsHeart /> Curtidos</AnimatedList>
                         <AnimatedList><BsCart3 /> Carrinho</AnimatedList>
@@ -43,14 +43,3 @@ export const Navbar = () => {
         </>
     );
 };
-
-{/* <DropdownList>
-    <AnimatedList onClick={() => handleDropdown(open)}>Catálogo</AnimatedList>
-    {open && (
-        <ul>
-            <li>Celulares</li>
-            <li>Headphones</li>
-            <li>Smartwatch</li>
-        </ul>
-    )}
-</DropdownList> */}
