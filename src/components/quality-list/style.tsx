@@ -13,7 +13,7 @@ export const Content = styled.ul`
     justify-content: center;
     align-items: center;
     gap: 60px;
-    background-color: #dee2e6;
+    background-color: #dfe3e7;
     border-radius: 5px;
     padding: 30px;
 

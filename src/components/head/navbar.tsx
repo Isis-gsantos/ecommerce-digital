@@ -2,9 +2,11 @@ import { Header, AnimatedList, NavbarDesktop, MobileMenu } from './style';
 import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
 import { useState } from 'react';
 import { CgMenuRightAlt } from "react-icons/cg";
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const { openCart, cartQuantity } = useShoppingCart();
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -22,7 +24,31 @@ export const Navbar = () => {
                             <input type="search" placeholder="Buscar" /> <span><BsSearch /></span>
                         </div>
                         <AnimatedList><BsHeart /> Curtidos</AnimatedList>
-                        <AnimatedList><BsCart3 /> Carrinho</AnimatedList>
+
+                        <AnimatedList onClick={openCart}>
+                            <BsCart3 /> Carrinho
+                            {cartQuantity > 0 && (
+                                <div
+                                    style={{
+                                        color: "white",
+                                        width: "1.5rem",
+                                        backgroundColor: "red",
+                                        height: "1.5rem",
+                                        position: "absolute",
+                                        bottom: 0,
+                                        right: 0,
+                                        transform: "translate(60%, 50%)",
+                                        display: 'flex',
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        borderRadius: "50%",
+                                    }}>
+                                    {cartQuantity}
+                                </div>
+                            )}
+                        </AnimatedList>
+
+
                     </ul>
                 </NavbarDesktop>
 
@@ -30,13 +56,13 @@ export const Navbar = () => {
                     <button onClick={toggleMenu}><CgMenuRightAlt /></button>
                     {showMenu && (
                         <ul>
-                        <li><a href="#catalogo">Catálogo</a></li>
-                        <div>
-                            <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
-                        </div>
-                        <li><BsHeart /> Curtidos</li>
-                        <li><BsCart3 /> Carrinho</li>
-                    </ul>
+                            <li><a href="#catalogo">Catálogo</a></li>
+                            <div>
+                                <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
+                            </div>
+                            <li><BsHeart /> Curtidos</li>
+                            <li><BsCart3 /> Carrinho</li>
+                        </ul>
                     )}
                 </MobileMenu>
             </Header>
