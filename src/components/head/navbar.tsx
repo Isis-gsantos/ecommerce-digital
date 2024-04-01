@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
-    const { openCart, cartQuantity } = useShoppingCart();
+    const { cartQuantity } = useShoppingCart();
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -27,7 +27,7 @@ export const Navbar = () => {
                         <AnimatedList><BsHeart /> Curtidos</AnimatedList>
 
                         <Link to="/carrinho">
-                            <AnimatedList onClick={openCart}>
+                            <AnimatedList >
                                 <BsCart3 /> Carrinho
                                 {cartQuantity > 0 && (
                                     <div

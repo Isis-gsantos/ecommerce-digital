@@ -13,9 +13,9 @@ export const ShoppingCart = () => {
             ) : (
                 <>
                     {cartItems.map((cartItem) => {
-                        const product = dataProducts.flat().find((prod) => prod.id === cartItem.id);
+                        const product = dataProducts.flat().find((product) => `${product.id}` === cartItem.idCart);
                         return (
-                            <div key={cartItem.id}>
+                            <div key={cartItem.idCart}>
                                 {product && (
                                     <>
                                         <img src={product.image} alt={product.title} />

@@ -20,25 +20,25 @@ export interface Products {
 
 export const dataPhones: Products[] = [
     {
-        id: '1',
+        id: 'iphone-13-rosa',
         image: phoneId1,
         title: 'Iphone 13 rosa', 
         cost: 4000,
     },
     {
-        id: '2',
+        id: 'iphone-13-branco',
         image: phoneId2,
         title: 'Iphone 13 branco', 
         cost: 4000,
     },
     {
-        id: '3',
+        id: 'iphone-13-preto',
         image: phoneId3,
         title: 'Iphone 13 preto', 
         cost: 4000,
     },
     {
-        id: '4',
+        id: 'galaxy-S20-lilas',
         image: phoneId4,
         title: 'Galaxy S20 lilás', 
         cost: 4000,
@@ -47,25 +47,25 @@ export const dataPhones: Products[] = [
 
 export const dataHeadphones: Products[] = [
     {
-        id: '1',
+        id: 'headphone-haylou-branco',
         image: headphoneId1,
         title: 'Headphone Haylou Branco', 
         cost: 300,
     },
     {
-        id: '2',
+        id: 'headphone-edifier-preto',
         image: headphoneId2,
         title: 'Edifier W820NB PLUS Preto', 
         cost: 300,
     },
     {
-        id: '3',
+        id: 'headphone-logitech-branco',
         image: headphoneId3,
         title: 'Headphone Gamer LOGITECH G Branco', 
         cost: 300,
     },
     {
-        id: '4',
+        id: 'headphone-edifier-marfim',
         image: headphoneId4,
         title: 'Headphone Edifier cor Marfim', 
         cost: 300,
@@ -74,25 +74,25 @@ export const dataHeadphones: Products[] = [
 
 export const dataWatch: Products[] = [
     {
-        id: '1',
+        id: 'smartwatch-bege',
         image: watchId1,
         title: 'Smart Watch HS54C Bege', 
         cost: 200,
     },
     {
-        id: '2',
+        id: 'smartwatch-rosa',
         image: watchId2,
         title: 'Smart Watch Kaymcixs Rosa', 
         cost: 200,
     },
     {
-        id: '3',
+        id: 'smartwatch-branco',
         image: watchId3,
         title: 'Smart Watch Amazfit Bip 5  Branco', 
         cost: 200,
     },
     {
-        id: '4',
+        id: 'smartwatch-preto',
         image: watchId4,
         title: 'Smart Watch Amazfit Bip 3 Preto', 
         cost: 200,

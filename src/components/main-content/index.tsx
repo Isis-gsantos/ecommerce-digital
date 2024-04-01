@@ -14,14 +14,14 @@ export const Main = () => {
             <Container>
                 <h2>Mais Vendidos</h2>
                 <Content id="catalogo">
-                    {dataProducts.map((products, index) => (
+                    {dataProducts.map((products) => (
                         products.map((product) => {
-                            const id = `${index}-${product.id}`
+                            const id = `${product.id}`
                             const quantity = getItemQuantity(id) 
 
                             return (
                                 <Products key={id}>
-                                    <Link to={`/produto/${index}/${product.id}`} state={{ category: index }}>
+                                    <Link to={`/produto/${product.id}`} > 
                                         <span><BsHeartFill className="icon" /></span>
                                         <div>
                                             <img src={product.image} alt={product.title} />
