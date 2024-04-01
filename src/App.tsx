@@ -3,6 +3,7 @@ import { Home } from "./pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductPage } from './pages/product-page';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
+import { ShoppingCart } from './pages/ShoppingCart';
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/product-page/:category/:id' element={<ProductPage />} />
+          <Route path='/produto/:category/:id' element={<ProductPage />} />
+          <Route path='/carrinho' element={<ShoppingCart />} />
         </Routes>
       </BrowserRouter>
     </ShoppingCartProvider>

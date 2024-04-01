@@ -21,7 +21,7 @@ export const Main = () => {
 
                             return (
                                 <Products key={id}>
-                                    <Link to={`/product-page/${index}/${product.id}`} state={{ category: index }}>
+                                    <Link to={`/produto/${index}/${product.id}`} state={{ category: index }}>
                                         <span><BsHeartFill className="icon" /></span>
                                         <div>
                                             <img src={product.image} alt={product.title} />

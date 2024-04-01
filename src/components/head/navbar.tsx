@@ -3,6 +3,7 @@ import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
 import { useState } from 'react';
 import { CgMenuRightAlt } from "react-icons/cg";
 import { useShoppingCart } from '../../context/ShoppingCartContext';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -25,28 +26,30 @@ export const Navbar = () => {
                         </div>
                         <AnimatedList><BsHeart /> Curtidos</AnimatedList>
 
-                        <AnimatedList onClick={openCart}>
-                            <BsCart3 /> Carrinho
-                            {cartQuantity > 0 && (
-                                <div
-                                    style={{
-                                        color: "white",
-                                        width: "1.5rem",
-                                        backgroundColor: "red",
-                                        height: "1.5rem",
-                                        position: "absolute",
-                                        bottom: 0,
-                                        right: 0,
-                                        transform: "translate(60%, 50%)",
-                                        display: 'flex',
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        borderRadius: "50%",
-                                    }}>
-                                    {cartQuantity}
-                                </div>
-                            )}
-                        </AnimatedList>
+                        <Link to="/carrinho">
+                            <AnimatedList onClick={openCart}>
+                                <BsCart3 /> Carrinho
+                                {cartQuantity > 0 && (
+                                    <div
+                                        style={{
+                                            color: "white",
+                                            width: "1.5rem",
+                                            backgroundColor: "red",
+                                            height: "1.5rem",
+                                            position: "absolute",
+                                            bottom: 0,
+                                            right: 0,
+                                            transform: "translate(60%, 50%)",
+                                            display: 'flex',
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            borderRadius: "50%",
+                                        }}>
+                                        {cartQuantity}
+                                    </div>
+                                )}
+                            </AnimatedList>
+                        </Link>
 
 
                     </ul>

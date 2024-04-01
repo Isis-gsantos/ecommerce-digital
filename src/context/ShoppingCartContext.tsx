@@ -37,19 +37,16 @@ export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
 
     function getItemQuantity(id: string) {
         return cartItems.find(item => item.id === id)?.quantity || 0;
-        //estou falando para achar o item com o correspondente id, e se tiver esse valor (essa frase representada pelo ?) eu quero retornar a quantidade ou retornar um id com valor de 0 (se não tiver nada)
     }
 
     function increaseCartQuantity(id: string) {
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id) == null) {
-                //se eu achar um item dentro do carrinho e se não tiver quero adicioanr
                 return [...currItems, { id, quantity: 1 }];
             } else {
                 return currItems.map(item => {
                     if (item.id === id) {
                         return { ...item, quantity: item.quantity + 1 };
-                        //se achar o item pega o current item e incrementa a quantidade com 1, se não retorna o item sem alterações
                     } else {
                         return item;
                     }
@@ -61,7 +58,6 @@ export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
     function decreaseCartQuantity(id: string) {
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id)?.quantity === 1) {
-                //verificando se a quantidade é igual a 1
                 return currItems.filter(item => item.id !== id);
             } else {
                 return currItems.map(item => {
