@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../variables";
 
 export const Container = styled.section`
     min-height: 30vh;
@@ -19,7 +20,7 @@ export const Content = styled.article`
     gap: 20px;
 
     h3 {
-        color: #fff;
+        color: ${colors.white};
         text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5); 
     }
 

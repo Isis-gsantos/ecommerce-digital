@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors, breakpoints } from "../../variables";
 
 export const Container = styled.footer`
     display: flex;
@@ -6,8 +7,8 @@ export const Container = styled.footer`
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #252424;
-    color: #ffffff;
+    background-color: ${colors.darkGrey};
+    color: ${colors.white};
 `;
 
 export const Subscribe = styled.section`
@@ -16,15 +17,15 @@ export const Subscribe = styled.section`
     align-items: center;
     gap: 200px;
 
-    @media (max-width: 800px) {
+    @media (max-width: ${breakpoints.md}) {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
 
     h2 {
-        background-color: #ffffff;
-        color: #252424;
+        background-color: ${colors.white};
+        color: ${colors.darkGrey};
         padding: 10px;
     }
 
@@ -42,10 +43,10 @@ export const Subscribe = styled.section`
             align-items: center;
             input {
                 background-color: transparent;
-                border: 1px solid #fff;
+                border: 1px solid ${colors.white};
                 padding: 5px;
                 width: 200px;
-                color: #fff;
+                color: ${colors.white};
 
                 &::placeholder {
                     padding: 0 8px;
@@ -54,8 +55,8 @@ export const Subscribe = styled.section`
 
             button {
                 padding: 6px 8px;
-                background-color: #ffffff;
-                color: #252424;
+                background-color: ${colors.white};
+                color: ${colors.darkGrey};
                 border: none;
                 font-weight: 600;
                 cursor: pointer;
@@ -75,7 +76,7 @@ export const Services = styled.nav`
     margin-top: 50px;
     gap: 50px;
 
-    @media (max-width: 910px) {
+    @media (max-width: ${breakpoints.lg}) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

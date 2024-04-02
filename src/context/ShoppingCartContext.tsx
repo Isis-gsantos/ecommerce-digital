@@ -22,17 +22,15 @@ const ShoppingCartContext = createContext({} as ShoppingCartContext);
 
 export function useShoppingCart() {
     return useContext(ShoppingCartContext);
-}
+};
 
 export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
-    // const [isOpen, setIsOpen] = useState(false)
-
-    const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+    const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
 
     function getItemQuantity(id: string) {
         return cartItems.find(item => item.idCart === id)?.quantity || 0;
-    }
+    };
 
     function increaseCartQuantity(id: string) {
         setCartItems(currItems => {
@@ -46,9 +44,9 @@ export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
                         return item;
                     }
                 });
-            }
+            };
         });
-    }
+    };
 
     function decreaseCartQuantity(id: string) {
         setCartItems(currItems => {
@@ -62,13 +60,13 @@ export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
                         return item;
                     }
                 });
-            }
+            };
         });
-    }
+    };
 
     function removeFromCart(id: string) {
         setCartItems(currItems => currItems.filter(item => item.idCart !== id));
-    }
+    };
 
     return (
         <ShoppingCartContext.Provider
@@ -77,12 +75,10 @@ export function ShoppingCartProvider({ children }: ShoppingProviderProps) {
                 increaseCartQuantity,
                 decreaseCartQuantity,
                 removeFromCart,
-                // openCart,
-                // closeCart,
                 cartItems,
                 cartQuantity
             }}>
             {children}
         </ShoppingCartContext.Provider>
     );
-}
+};

@@ -27,7 +27,7 @@ export const Navbar = () => {
                         <AnimatedList><BsHeart /> Curtidos</AnimatedList>
 
                         <Link to="/carrinho">
-                            <AnimatedList >
+                            <AnimatedList>
                                 <BsCart3 /> Carrinho
                                 {cartQuantity > 0 && (
                                     <div
@@ -64,7 +64,31 @@ export const Navbar = () => {
                                 <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
                             </div>
                             <li><BsHeart /> Curtidos</li>
-                            <li><BsCart3 /> Carrinho</li>
+                            <Link to="/carrinho">
+                                <li style={{ position: 'relative' }}>
+                                    <BsCart3 /> Carrinho
+                                    {cartQuantity > 0 && (
+                                        <div
+                                            style={{
+                                                color: "white",
+                                                width: "1.5rem",
+                                                backgroundColor: "red",
+                                                height: "1.5rem",
+                                                position: "absolute",
+                                                bottom: 0,
+                                                right: 0,
+                                                top: 0,
+                                                transform: "translate(60%, 50%)",
+                                                display: 'flex',
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                borderRadius: "50%",
+                                            }}>
+                                            {cartQuantity}
+                                        </div>
+                                    )}
+                                </li>
+                            </Link>
                         </ul>
                     )}
                 </MobileMenu>

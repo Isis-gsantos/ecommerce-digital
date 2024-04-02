@@ -1,14 +1,13 @@
 import styled, { keyframes } from "styled-components";
+import { colors, breakpoints } from "../../variables";
 
 export const Container = styled.section`
-    background: rgb(101,94,97);
-    background: linear-gradient(270deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
+    background: ${colors.primaryBackground};
     min-height: 100vh;
-    color: #fff;
+    color: ${colors.white};
 
     @media (max-width: 500px) {
-        background: rgb(101,94,97);
-        background: linear-gradient(0deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
+        background: ${colors.mobileBackground};
     }
 `;
 
@@ -17,29 +16,23 @@ export const Header = styled.header`
     justify-content: space-around;
     align-items: center;
     padding: 15px;
-    
-    color: #ffffff;
-
-    .backgroundProsucts {
-        background: rgb(101,94,97);
-        background: linear-gradient(270deg, rgba(101,94,97,1) 0%, rgba(37,36,36,1) 100%);
-    }
+    color: ${colors.white};
 
     h1 {
-        background-color: #ffffff;
-        color: #252424;
+        background-color: ${colors.white};
+        color: ${colors.darkGrey};
         padding: 10px;
     }
 
-    a {
-        color: #ffffff;
+    a, input, span {
+        color: ${colors.white};
     }
 `;
 
 export const NavbarDesktop = styled.nav`
     display: block;
 
-    @media (max-width: 910px) {
+    @media (max-width: ${breakpoints.lg}) {
         display: none;
     }
 
@@ -55,24 +48,20 @@ export const NavbarDesktop = styled.nav`
         position: relative;
         
         input {
-            border: 1px solid #fff;
+            border: 1px solid ${colors.white};
             background: transparent;
             border-radius: 5px;
             padding: 5px 15px;
-            color: #ffffff;
-            
             position: relative;
+
             &::placeholder {
-                color: #ffffff;
                 padding: 0 10px;
             }
         }
 
         span {
             position: absolute;
-            color: black;
             right: 1px;
-            color: #fff;
             padding: 0 5px;
             height: 100%;
             border-radius: 5px;
@@ -88,14 +77,12 @@ export const NavbarDesktop = styled.nav`
         gap: 8px;
         font-size: 16px;
     }
-
-    
 `;
 
 export const MobileMenu = styled.div`
     display: none;
     
-    @media (max-width: 910px) {
+    @media (max-width: ${breakpoints.lg}) {
         display: block;
         position: relative;
     }
@@ -104,7 +91,7 @@ export const MobileMenu = styled.div`
         position: absolute;
         z-index: 1;
         height: 350px;
-        background-color: #252424;
+        background-color: ${colors.darkGrey};
         width: 250px;
         display: flex;
         flex-direction: column;
@@ -116,37 +103,29 @@ export const MobileMenu = styled.div`
         div {
         position: relative;
         
-        input {
-            border: 1px solid #fff;
-            background: transparent;
-            border-radius: 5px;
-            padding: 5px 15px;
-            color: #ffffff;
-            
-            position: relative;
-            &::placeholder {
-                color: #ffffff;
-                padding: 0 10px;
+            input {
+                border: 1px solid ;
+                background: transparent;
+                border-radius: 5px;
+                padding: 5px 15px;
+                position: relative;
+            }
+
+            span {
+                position: absolute;
+                right: 1px;
+                padding: 0 5px;
+                height: 100%;
+                border-radius: 5px;
+                top: 5px;
             }
         }
-
-        span {
-            position: absolute;
-            color: black;
-            right: 1px;
-            color: #fff;
-            padding: 0 5px;
-            height: 100%;
-            border-radius: 5px;
-            top: 5px;
-        }
-    }
     }
 
     button {
         background-color: transparent;
         border: none;
-        color: #ffffff;
+        color: ${colors.white};
         font-size: 40px;
         position: relative;
     }
@@ -161,7 +140,7 @@ export const AnimatedList = styled.li`
             bottom: -2px;
             width: 100%;
             height: 2px;
-            background-color: #fff;
+            background-color: ${colors.white};
             transform: scaleX(0);
             transform-origin: bottom right;
             transition: transform 0.3s ease-out;

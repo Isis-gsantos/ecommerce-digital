@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { colors } from "../variables";
 
 const animatedProduct = keyframes`
     from  {
@@ -14,7 +15,7 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
     min-height: 85vh;
-    background-color: #ebe5e0;
+    background-color: ${colors.productsBackground};
     padding: 20px;
 
     article {
@@ -36,7 +37,7 @@ export const ContainerImage = styled.div`
     background-color: #f8f3ef;
     padding: 45px 70px;
     border-radius: 10px;
-    box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.1);
+    box-shadow: ${colors.boxShadow};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +49,6 @@ export const ContainerImage = styled.div`
      }
 
      @media (max-width: 400px) {
-        /* max-width: 100%; */
         padding: 40px;
 
         img {
@@ -62,12 +62,15 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 30px;
-    color: #252424;
+    color: ${colors.darkGrey};
     max-width: 400px;
     
     a { 
-        color: #023e8a;
+        color: ${colors.returnLinkColor};
         margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     h4 {
@@ -82,8 +85,8 @@ export const Content = styled.div`
 
     button {
         border: none;
-        background-color: #252424;
-        color: #fff;
+        background-color: ${colors.darkGrey};
+        color: ${colors.white};
         padding: 10px;
         border-radius: 10px;
         font-size: 15px;

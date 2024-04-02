@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { colors } from "../../variables";
 
-export   const Container = styled.section`
+export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +9,8 @@ export   const Container = styled.section`
     padding: 30px;
 
     h2 {
-        background-color: #252424;
-        color: #ffffff;
+        background-color: ${colors.darkGrey};
+        color: ${colors.white};
         padding: 10px;
     }
 `
@@ -19,19 +20,19 @@ export const Content = styled.article`
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    margin-top: 30px
+    margin-top: 30px;
 `;
 
 export const Products = styled.div`
-    background-color:#ffffff;
+    background-color:${colors.white};
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.1);
+    box-shadow: ${colors.boxShadow};
     width: 220px;
     position: relative;
     
     a {
-        color: #252424;
+        color: ${colors.darkGrey};
     }
 
     span {
@@ -40,8 +41,8 @@ export const Products = styled.div`
         right: 0;
         padding: 5px 10px;
         border-radius: 5px;
-        background-color: #252424;
-        color: #ffffff;
+        background-color: ${colors.darkGrey};
+        color: ${colors.white};
         cursor: pointer;
     }
 
@@ -74,8 +75,8 @@ export const Products = styled.div`
 
     button {
         border: none;
-        background-color: #252424;
-        color: #fff;
+        background-color: ${colors.darkGrey};
+        color: ${colors.white};
         padding: 10px;
         border-radius: 10px;
         font-size: 15px;

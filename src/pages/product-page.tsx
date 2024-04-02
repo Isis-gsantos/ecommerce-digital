@@ -23,7 +23,7 @@ export const ProductPage = () => {
         return (
             <>
                 <div>Produto não encontrado</div>
-                <Link to="/"></Link>
+                <Link to="/"><BsArrowLeftCircle /> Página Inicial</Link>
             </>
         );
     }
