@@ -24,7 +24,9 @@ export const Navbar = () => {
                         <div>
                             <input type="search" placeholder="Buscar" /> <span><BsSearch /></span>
                         </div>
-                        <AnimatedList><BsHeart /> Curtidos</AnimatedList>
+                        <Link to="/favoritos" >
+                            <AnimatedList><BsHeart /> Favoritos</AnimatedList>
+                        </Link>
 
                         <Link to="/carrinho">
                             <AnimatedList>

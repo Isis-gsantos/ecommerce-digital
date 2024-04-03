@@ -1,7 +1,7 @@
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import { Link } from 'react-router-dom';
 import { dataProducts } from '../components/main-content';
-import { BsArrowLeftCircle } from "react-icons/bs";
+import { BsArrowLeftCircle, BsEmojiFrown } from "react-icons/bs";
 import { ProductsContainer, ProductsContent, ProductExibtion } from './ShoppingCart-style';
 
 export const ShoppingCart = () => {
@@ -20,11 +20,11 @@ export const ShoppingCart = () => {
 
     return (
         <ProductsContainer>
-            <h2>Carrinho de Compras</h2>
+            <h2>Carrinho</h2>
             <Link to="/" className='return-home'><BsArrowLeftCircle /> Página Inicial</Link>
             {cartItems.length === 0 ? (
                 <div>
-                    <p>Não há produtos no carrinho.</p>
+                    <p>Não há produtos no carrinho <BsEmojiFrown /></p>
                 </div>
             ) : (
                 <>

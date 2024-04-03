@@ -8,7 +8,6 @@ import { dataProducts } from "../components/main-content";
 export const ProductPage = () => {
     const { id } = useParams<{ id: string }>();
 
-    // Aqui, vamos percorrer cada matriz de produtos corretamente e encontrar o produto com base no ID
     let product: Products | undefined;
     dataProducts.forEach((products) => {
         products.forEach((item) => {
@@ -18,7 +17,6 @@ export const ProductPage = () => {
         });
     });
 
-    // Verifique se o produto foi encontrado antes de tentar acessar seus campos
     if (!product) {
         return (
             <>
@@ -50,27 +48,3 @@ export const ProductPage = () => {
         </>
     );
 };
-
-
-
-// const { category, id } = useParams<{ category: string; id: string }>();
-// let product: Products | undefined | null;
-
-// switch (category) {
-//     case '0':
-//         product = dataPhones.find(item => item.id === id);
-//         break;
-//     case '1':
-//         product = dataHeadphones.find(item => item.id === id);
-//         break;
-//     case '2':
-//         product = dataWatch.find(item => item.id === id);
-//         break;
-//     default:
-//         product = null;
-//         break;
-// }
-
-// if (!product) {
-//     return <div>Produto não encontrado</div>;
-// }
