@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useWishlist } from '@context/WishlistContext';
-import { dataProducts } from '@components/main-content';
+import { useWishlist } from '../context/WishlistContext';
+import { dataProducts } from '../components/main-content';
 import { ProductsContainer, ProductsContent, ProductExibtion } from './ProductPage-and-shopping-style';
 import { BsArrowLeftCircle, BsEmojiFrown } from "react-icons/bs";
-import { AddToCartButton } from '@components/add-to-cart-component';
+import { AddToCartButton } from '../components/add-to-cart-component';
 
 export const Wishlist = () => {
     const { wishlist, removeFromWishlist } = useWishlist();

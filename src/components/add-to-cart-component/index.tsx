@@ -1,4 +1,4 @@
-import { useShoppingCart } from "@context/ShoppingCartContext";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { BsFillTrash3Fill } from "react-icons/bs";
 import { Products } from "../products";
 import { Button, StyledButtonCart } from "./styled-add-to-cart";

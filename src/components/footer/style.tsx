@@ -17,7 +17,7 @@ export const Subscribe = styled.section`
     align-items: center;
     gap: 200px;
 
-    @media (max-width: ${breakpoints.md}) {
+    @media (max-width: ${breakpoints.lg}) {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -76,7 +76,7 @@ export const Services = styled.nav`
     margin-top: 50px;
     gap: 50px;
 
-    @media (max-width: ${breakpoints.lg}) {
+    @media (max-width: ${breakpoints.extraLg}) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

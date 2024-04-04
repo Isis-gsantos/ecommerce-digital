@@ -13,6 +13,10 @@ export const width = {
 };
 
 export const breakpoints = {
-    lg: '910px',
-    md: '800px',
+    extraLg: '910px',
+    lg: '800px',
+    md : '750px',
+    mobileMd: '500px',
+    sm: '400px',
+    extraSm: '300px'
 };

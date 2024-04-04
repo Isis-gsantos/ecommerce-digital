@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { colors, width } from "../variables";
+import { colors, width, breakpoints } from "../variables";
 
 const animatedProduct = keyframes`
     from  {
@@ -51,7 +51,7 @@ export const ProductsContainer = styled.section`
         margin: 10px 0;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: ${breakpoints.mobileMd}) {
         .return-home {
             position: absolute;
             top: 100px;
@@ -69,7 +69,7 @@ export const ProductsContent = styled.article`
     justify-content: center;
     margin: 80px 0 30px;
 
-    @media (max-width: 500px) {
+    @media (max-width: ${breakpoints.mobileMd}) {
         margin-top: 130px;
     }
 `;
@@ -128,7 +128,7 @@ export const ProductPageContainer = styled.section`
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
 
-        @media (max-width: 730px) {
+        @media (max-width: ${breakpoints.md}) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -153,7 +153,7 @@ export const ProductPageContainerImage = styled.div`
         animation: ${animatedProduct} 1.5s infinite alternate ease-in-out;
      }
 
-     @media (max-width: 400px) {
+     @media (max-width: ${breakpoints.sm}) {
         padding: 40px;
 
         img {

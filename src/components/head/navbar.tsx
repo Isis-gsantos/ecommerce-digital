@@ -2,7 +2,7 @@ import { Header, AnimatedList, NavbarDesktop, MobileMenu } from './style';
 import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
 import { useState } from 'react';
 import { CgMenuRightAlt } from "react-icons/cg";
-import { useShoppingCart } from '@context/ShoppingCartContext';
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {

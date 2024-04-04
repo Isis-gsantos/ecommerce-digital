@@ -6,7 +6,7 @@ export const Container = styled.section`
     min-height: 100vh;
     color: ${colors.white};
 
-    @media (max-width: 500px) {
+    @media (max-width: ${breakpoints.mobileMd}) {
         background: ${colors.mobileBackground};
     }
 `;
@@ -27,12 +27,18 @@ export const Header = styled.header`
     a, input, span {
         color: ${colors.white};
     }
+
+    @media (max-width: ${breakpoints.mobileMd}) {
+        h1 {
+            font-size: 25px;
+        }
+    }
 `;
 
 export const NavbarDesktop = styled.nav`
     display: block;
 
-    @media (max-width: ${breakpoints.lg}) {
+    @media (max-width: ${breakpoints.extraLg}) {
         display: none;
     }
 
@@ -82,7 +88,7 @@ export const NavbarDesktop = styled.nav`
 export const MobileMenu = styled.div`
     display: none;
     
-    @media (max-width: ${breakpoints.lg}) {
+    @media (max-width: ${breakpoints.extraLg}) {
         display: block;
         position: relative;
     }
@@ -168,7 +174,7 @@ export const ContentBanner = styled.section`
     gap: 60px;
     padding: 30px;
 
-    @media (max-width: 750px) {
+    @media (max-width: ${breakpoints.md}) {
         display: flex;
         flex-direction: column;
         text-align: center;

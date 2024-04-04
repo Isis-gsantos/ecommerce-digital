@@ -25,6 +25,7 @@ export const StyledButtonCart = styled.section`
         border-radius: 5px;
         display: flex;
         align-items: center;
+        padding: 10px;
     }
 
     .removeFromCart {
