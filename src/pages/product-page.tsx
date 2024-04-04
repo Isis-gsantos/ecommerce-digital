@@ -1,10 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import { Products } from "../components/products";
+import { Products } from "@components/products";
 import { ProductPageContainer, ProductPageContainerImage, ProductPageContent } from "./ProductPage-and-shopping-style";
 import { BsArrowLeftCircle } from "react-icons/bs";
-import { Navbar } from "../components/head/navbar";
-import { dataProducts } from "../components/main-content";
-import { AddToCartButton } from '../components/add-to-cart-component';
+import { Navbar } from "@components/head/navbar";
+import { dataProducts } from "@components/main-content";
+import { AddToCartButton } from '@components/add-to-cart-component';
 
 export const ProductPage = () => {
     const { id } = useParams<{ id: string }>();

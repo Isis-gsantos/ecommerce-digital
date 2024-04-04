@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import { EffectFade } from "swiper/modules";
-import celularBanner from '../../images/celular-1.png'
-import headphoneBanner from '../../images/headphone-4.png'
-import watchBanner from '../../images/watch-3.png'
+import celularBanner from '@images/celular-1.png'
+import headphoneBanner from '@images/headphone-4.png'
+import watchBanner from '@images/watch-3.png'
 import { Container, Content } from "./style";
 
 register();

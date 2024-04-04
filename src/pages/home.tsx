@@ -1,9 +1,9 @@
-import { QualityList } from "../components/quality-list";
-import { Head } from "../components/head/index";
-import { Main } from "../components/main-content";
-import { Slider } from "../components/slider";
+import { Head } from "@components/head";
+import { Slider } from "@components/slider";
+import { Main } from "@components/main-content";
+import { QualityList } from "@components/quality-list";
+import { Footer } from "@components/footer";
 import styled from "styled-components";
-import { Footer } from "../components/footer";
 
 export const Home = () => {
     return (

@@ -3,7 +3,7 @@ import { dataPhones, dataHeadphones, dataWatch } from "../products";
 import { Container, Content, Products } from "./style";
 import { BsHeartFill, BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useWishlist } from "../../context/WishlistContext";
+import { useWishlist } from "@context/WishlistContext";
 import { AddToCartButton } from '../add-to-cart-component';
 
 export const dataProducts = [dataPhones, dataHeadphones, dataWatch];

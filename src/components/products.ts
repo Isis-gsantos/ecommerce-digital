@@ -1,15 +1,15 @@
-import phoneId1 from '../images/celular-1.png';
-import phoneId2 from '../images/celular-2.png';
-import phoneId3 from '../images/celular-3.png';
-import phoneId4 from '../images/celular-4.png';
-import headphoneId1 from '../images/headphone-1.png';
-import headphoneId2 from '../images/headphone-2.png';
-import headphoneId3 from '../images/headphone-3.png';
-import headphoneId4 from '../images/headphone-4.png';
-import watchId1 from '../images/watch-1.png';
-import watchId2 from '../images/watch-2.png';
-import watchId3 from '../images/watch-3.png';
-import watchId4 from '../images/watch-4.png';
+import phoneId1 from '@images/celular-1.png';
+import phoneId2 from '@images/celular-2.png';
+import phoneId3 from '@images/celular-3.png';
+import phoneId4 from '@images/celular-4.png';
+import headphoneId1 from '@images/headphone-1.png';
+import headphoneId2 from '@images/headphone-2.png';
+import headphoneId3 from '@images/headphone-3.png';
+import headphoneId4 from '@images/headphone-4.png';
+import watchId1 from '@images/watch-1.png';
+import watchId2 from '@images/watch-2.png';
+import watchId3 from '@images/watch-3.png';
+import watchId4 from '@images/watch-4.png';
 
 export interface Products {
     id: string;

@@ -1,5 +1,5 @@
 import { Container, ContentBanner} from './style'
-import headphoneDestaque from '../../images/headphone-1.png'
+import headphoneDestaque from '@images/headphone-1.png'
 import { Navbar } from './navbar';
 
 export const Head = () => {
