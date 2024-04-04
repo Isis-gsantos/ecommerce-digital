@@ -2,7 +2,7 @@ import { useShoppingCart } from '../context/ShoppingCartContext';
 import { Link } from 'react-router-dom';
 import { dataProducts } from '../components/main-content';
 import { BsArrowLeftCircle, BsEmojiFrown } from "react-icons/bs";
-import { ProductsContainer, ProductsContent, ProductExibtion } from './ShoppingCart-style';
+import { ProductsContainer, ProductsContent, ProductExibtion } from './ProductPage-and-shopping-style';
 
 export const ShoppingCart = () => {
     const { cartItems } = useShoppingCart();

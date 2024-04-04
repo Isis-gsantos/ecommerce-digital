@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { dataPhones, dataHeadphones, dataWatch } from "../products";
-import { Container, Content, Products, StyledButtonCart } from "./style";
-import { BsHeartFill, BsFillTrash3Fill, BsHeart } from "react-icons/bs";
+import { Container, Content, Products } from "./style";
+import { BsHeartFill, BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/WishlistContext";
 import { AddToCartButton } from '../add-to-cart-component';
@@ -45,24 +45,7 @@ export const Main = () => {
                                         <p>R${product.cost}</p>
                                     </Link>
 
-                                    {/* <div>
-                                        {quantity === 0 ? (
-                                            <button onClick={() => increaseCartQuantity(id)}>
-                                                Adicionar ao carrinho
-                                            </button>
-                                        ) : (
-                                            <article>
-                                                <StyledButtonCart>
-                                                    <button onClick={() => increaseCartQuantity(id)}>+</button>
-                                                    <p>{quantity}</p>
-                                                    <button onClick={() => decreaseCartQuantity(id)}>-</button>
-                                                    <button className="removeFromCart" onClick={() => removeFromCart(id)}><BsFillTrash3Fill /></button>
-                                                </StyledButtonCart>
-                                            </article>
-                                        )}
-                                    </div> */}
-
-                                    <AddToCartButton />
+                                    <AddToCartButton product={product} />
                                 </Products>
                             );
                         })

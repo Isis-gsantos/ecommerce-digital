@@ -65,7 +65,9 @@ export const Navbar = () => {
                             <div>
                                 <input type="text" placeholder="Buscar" /> <span><BsSearch /></span>
                             </div>
-                            <li><BsHeart /> Curtidos</li>
+                            <Link to="/favoritos" >
+                                <li><BsHeart /> Favoritos</li>
+                            </Link>
                             <Link to="/carrinho">
                                 <li style={{ position: 'relative' }}>
                                     <BsCart3 /> Carrinho
