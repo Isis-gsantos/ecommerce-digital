@@ -50,7 +50,7 @@ export const ShoppingCart = () => {
                     <div className='total-cost'>
                         Total: <b>R${calculateTotalSum()}</b>
                     </div>
-                    <Link to="/checkout" className='checkout'>Finalizar Compra</Link>
+                    <a href='#' className='checkout'>Finalizar Compra</a>
                 </>
             )}
         </ProductsContainer>
