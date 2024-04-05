@@ -2,6 +2,8 @@
 
 ![digitalhub layout](https://github.com/Isis-gsantos/ecommerce-digital/assets/142533840/5dc66388-fa9b-4f16-8daf-fd3849c382b6)
 
+Site: https://digitalhub-store.vercel.app/
+
 ## Descrição do Projeto :scroll:
 DigitalHub Store é um e-commerce fictício especializado na venda de produtos eletrônicos, incluindo celulares, headphones e smartwatches. O site oferece aos usuários uma experiência intuitiva de navegação, permitindo que eles explorem um catálogo diversificado e adquiram seus itens favoritos com facilidade.
 
